@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last</title>
+    <link rel="stylesheet" href="yy.css">
+</head>
+<body>
+    <form name="form1">
+        <fieldset style="margin-left: 500px; margin-top: 180px;">
+           
+           <img src="th.jpeg" alt="" class="imu">   <p class="pp"><p>calculator</p>
+            <h1>standard</h1>
+        <!--this input box shows the button pressed by the user in calculator-->
+        <input class="calc" type="text" name="answer"><br> <br>
+        <input class="btn" value="%" onclick="form1.answer.value += '%'">
+        <input class="btn" value="CE" onclick="form1.answer.value=''" id="CE">
+        <input class="btn" value="C" onclick="form1.answer.value=''" id="C">
+        <input class="btn" value="x" onclick="form1.answer.value=''" id="clear">
+        <br> <br>
+
+
+    
+        <input class="btn" value="7" onclick="form1.answer.value += '7'">
+        <input class="btn" value="8" onclick="form1.answer.value += '8'">
+        <input class="btn" value="9" onclick="form1.answer.value += '9'">
+        <input class="btn" value="*" onclick="form1.answer.value += '*'">
+        <br> <br>
+        <input class="btn" value="4" onclick="form1.answer.value += '4'">
+        <input class="btn" value="5" onclick="form1.answer.value += '5'">
+        <input class="btn" value="6" onclick="form1.answer.value += '6'">
+        <input class="btn" value="-" onclick="form1.answer.value += '-'">
+        <br> <br>
+        <input class="btn" value="1" onclick="form1.answer.value += '1'">
+        <input class="btn" value="2" onclick="form1.answer.value += '2'">
+        <input class="btn" value="3" onclick="form1.answer.value += '3'">
+        <input class="btn" value="+" onclick="form1.answer.value += '+'">
+        <br> <br>
+        <input class="btn" value="+/-" onclick="form1.answer.value += '/'">
+        <input class="btn" value="0" onclick="form1.answer.value += '0'">
+        <input class="btn" value="." onclick="form1.answer.value += '.'">
+        <input class="btn" value="=" onclick="form1.answer.value = eval(form1.answer.value)">
+        <br> <br>
+
+       
+    </fieldset>
+    </form> 
+
+
+</body>
+</html>

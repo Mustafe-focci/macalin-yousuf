@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="theme-style" rel="stylesheet" href="light.css">
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <script src="script.js"></script>
+    <script>
+        function toggleDarkMode() {
+    const themeStyle = document.getElementById('theme-style');
+    if (themeStyle.getAttribute('href') === 'light.css') {
+        themeStyle.setAttribute('href', 'dark.css');
+    } else {
+        themeStyle.setAttribute('href', 'light.css');
+    }
+}
+    </script>
+</body>
+</html>

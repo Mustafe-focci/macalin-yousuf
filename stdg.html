@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Form - HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .form-input {
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="gradeForm">
+            <input type="text" id="studentName" name="studentName" class="form-input" placeholder="Enter student name..." required>
+            <br>
+            <input type="number" id="studentGrade" name="studentGrade" class="form-input" placeholder="Enter student grade..." required>
+            <br>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('gradeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('studentName').value;
+            var grade = document.getElementById('studentGrade').value;
+
+            alert("Student Name: " + name + "\nStudent Grade: " + grade);
+
+            // You can perform further actions here, such as sending data to a server or displaying it on the page.
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.btn{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 4px;
+    color: rgb(0, 16, 16);
+    background-color: rgb(177, 193, 149);
+    padding-left: 6px;
+    font-size: 18px;
+   
+}
+fieldset{
+    width: 180px;
+    height: 480px;
+    background-color: aliceblue;
+    border-radius: 10px;
+   
+}
+.calc{
+
+    width: 95%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    
+}
+.pp{
+    margin-top: auto;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+.imu{
+    width: 17px;
+    height: 18px;
+}
+body{
+    background-color: brown;
+}
+
+
+
+

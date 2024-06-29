@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="g.css">
+    <link rel="stylesheet" href="gg.java">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .clock-container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: relative;
+            background: white;
+        }
+        .hand {
+            position: absolute;
+            transform-origin: center bottom;
+            background: black;
+        }
+        .hour-hand {
+            width: 8px;
+            height: 100px;
+            top: 150px;
+            left: 196px;
+            z-index: 3;
+        }
+        .minute-hand {
+            width: 6px;
+            height: 140px;
+            top: 140px;
+            left: 197px;
+            z-index: 2;
+        }
+        .second-hand {
+            width: 2px;
+            height: 160px;
+            top: 130px;
+            left: 199px;
+            background-color: red;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+    </div>
+    <script>
+        // JavaFX applet embedding
+        document.addEventListener('DOMContentLoaded', function () {
+            var applet = document.createElement('applet');
+            applet.code = 'AnalogClock.class'; // Name of the Java class file
+            applet.archive = 'file:///path/to/your/project/AnalogClock.jar'; // Path to your Java application jar file
+            applet.width = '400';
+            applet.height = '400';
+            document.body.appendChild(applet);
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <fieldset>
+    <h2>Login</h2>
+    <form action="login" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    
+    <script>
+        
+        
+        import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        // Perform authentication (check credentials against a database, for example)
+        boolean isAuthenticated = authenticate(username, password);
+
+        if (isAuthenticated) {
+            // If authentication successful, redirect to a welcome page
+            response.sendRedirect("welcome.jsp");
+        } else {
+            // If authentication fails, redirect back to the login page with an error message
+            response.sendRedirect("login.html?error=true");
+        }
+    }
+
+    private boolean authenticate(String username, String password) {
+        // Perform authentication logic here, e.g., check against a database
+        // This is just a dummy example
+        return username.equals("user") && password.equals("password");
+    }
+}
+
+
+
+<h2>Welcome, <%= request.getParameter("username") %>!</h2>
+    <!-- You can access the username parameter passed from the login form -->
+
+    </script>
+</fieldset>
+   
+</body>
+</html>
